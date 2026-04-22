@@ -1,2 +1,2 @@
-# Online-Learning-Platform-OLP
-PHP MySQL based Online Learning Platform
+# Online-Learning-Platform-OLP-
+# Online-Learning-Platform-OLP-

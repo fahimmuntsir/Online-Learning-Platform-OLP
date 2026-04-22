@@ -1,0 +1,664 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f0f2f5; 
+    color: #333;
+}
+
+/* login-signup */
+.form-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    color: #555;
+    font-weight: bold;
+    text-align: left;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    background: #fff;
+    color: #333;
+    font-size: 1rem;
+}
+
+form input::placeholder {
+    color: #888;
+}
+
+button {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(135deg, #5c49c6, #000000);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff5722, #ff5722);
+}
+
+.logout-btn {
+    background: linear-gradient(135deg, #ff5252, #e53935);
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.login-btn {
+    background: linear-gradient(135deg, #f41371, #f41371);
+    margin-top: 1rem;
+    width: 100%;
+}
+
+p {
+    margin-top: 1rem;
+    color: #555;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Dashboard*/
+.dashboard-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background: linear-gradient(135deg, #D4145A , #FBB03B);
+    padding: 2rem;
+    color: #fff;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #ffe57f;
+}
+
+.sidebar ul li a i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 2rem;
+    background: #fff;
+}
+
+/* Card*/
+.course-card, .quiz-card,.certificate-card {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    color: #333333;
+    transition: transform 0.2s ease;
+}
+
+.course-card:hover, .quiz-card:hover, .certificate-card:hover {
+    transform: translateY(-5px);
+}
+
+.progress-card{
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #333333;
+    transition: transform 0.2s ease;
+}
+
+.progress-card:hover{
+    transform: translateY(-5px);
+}
+
+/*Student Progress Bar*/
+.progress-bar {
+    width: 100%;
+    background: #b95656;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+}
+
+.progress {
+    height: 10px;
+    background: linear-gradient(135deg, #43A047, #388E3C);
+}
+
+/* LeaderBoard Table*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    color: #333;
+    text-align: center;
+}
+
+th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+td {
+    background-color: #fafafa;
+}
+
+table tbody tr:hover {
+    background-color: #f0f8ff;
+}
+
+/* Announcement*/
+.announcement-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.announcement-container h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.announcement-form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    color: #555;
+    font-weight: bold;
+}
+
+.announcement-form input[type="text"],
+.announcement-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    background: #fff;
+    color: #333;
+}
+
+.announcement-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.announcement-form button {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(135deg, #4CAF50, #43A047);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.announcement-form button:hover {
+    background: linear-gradient(135deg, #43A047, #4CAF50);
+}
+
+/* Course Creation*/
+.course-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-container h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.course-form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    color: #555;
+    font-weight: bold;
+}
+
+.course-form input[type="text"],
+.course-form input[type="date"],
+.course-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    background: #fff;
+    color: #333;
+}
+
+.course-form textarea {
+    resize: vertical;
+}
+
+.course-form button {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(135deg, #4CAF50, #43A047);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.course-form button:hover {
+    background: linear-gradient(135deg, #43A047, #4CAF50);
+}
+
+/* Quiz Creation*/
+.quiz-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-container h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.quiz-form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    color: #555;
+    font-weight: bold;
+}
+
+.quiz-form input[type="text"],
+.quiz-form textarea,
+.quiz-form select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    background: #fff;
+    color: #333;
+}
+
+.quiz-form textarea {
+    resize: vertical;
+}
+
+.question-section {
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+.add-question-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.add-question-btn:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+}
+
+.quiz-form button[type="submit"] {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(135deg, #4CAF50, #43A047);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.quiz-form button[type="submit"]:hover {
+    background: linear-gradient(135deg, #43A047, #4CAF50);
+}
+
+/* Results*/
+.results-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.results-container h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.results-form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    color: #555;
+    font-weight: bold;
+}
+
+.results-form select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    background: #fff;
+    color: #333;
+}
+
+.view-results-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.view-results-btn:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+}
+
+/* Publish Results Table*/
+.results-table h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.results-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.results-table th, .results-table td {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    color: #333;
+    text-align: center;
+}
+
+.results-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.results-table tbody tr:hover {
+    background-color: #f0f8ff;
+}
+
+.publish-btn {
+    padding: 0.4rem 0.8rem;
+    background: linear-gradient(135deg, #43A047, #388E3C);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.publish-btn:hover {
+    background: linear-gradient(135deg, #388E3C, #43A047);
+}
+
+/* Certificate Issue*/
+.certificate-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.certificate-container h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.certificate-form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    color: #555;
+    font-weight: bold;
+}
+
+.certificate-form select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    background: #fff;
+    color: #333;
+}
+
+.view-students-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.view-students-btn:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+}
+
+/* Students Table*/
+.students-table h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.students-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.students-table th, .students-table td {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    color: #333;
+    text-align: center;
+}
+
+.students-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.students-table tbody tr:hover {
+    background-color: #f0f8ff;
+}
+
+.issue-certificate-btn {
+    padding: 0.4rem 0.8rem;
+    background: linear-gradient(135deg, #43A047, #388E3C);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.issue-certificate-btn:hover {
+    background: linear-gradient(135deg, #388E3C, #43A047);
+}
+
+.issue-certificate-btn[disabled] {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Back Button*/
+.back-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(135deg, #ff5252, #e53935);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.back-btn:hover {
+    background: linear-gradient(135deg, #e53935, #ff5252);
+}
+  /* Footer Section */
+/* Ensure full height for body and center content */
+
+/* Main container for content */
+.main-container {
+    flex: 1; /* Push footer to the bottom */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f2f5; 
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Ensure it stays at the bottom if content is small */
+    bottom: 0;
+    width: 100%; /* Full width of the page */
+}
+
+footer a {
+    color: #f41371;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Certificates - OLP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="certificate-container">
+        <h1>Issue Certificates</h1>
+        
+   
+        <form class="certificate-form">
+            <label for="course-select">Select Course:</label>
+            <select id="course-select" name="course-select" required>
+                <option value="">Choose a course</option>
+                <option value="course1">Course 1: Introduction to Programming</option>
+                <option value="course2">Course 2: Advanced Mathematics</option>
+                <option value="course3">Course 3: History of Art</option>
+      
+            </select>
+            
+            <button type="button" class="view-students-btn">View Students</button>
+        </form>
+       
+        <div class="students-table">
+            <h2>Enrolled Students</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Final Score</th>
+                        <th>Eligibility</th>
+                        <th>Issue Certificate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Student A</td>
+                        <td>92%</td>
+                        <td>Eligible</td>
+                        <td><button class="issue-certificate-btn">Issue</button></td>
+                    </tr>
+                    <tr>
+                        <td>Student B</td>
+                        <td>78%</td>
+                        <td>Eligible</td>
+                        <td><button class="issue-certificate-btn">Issue</button></td>
+                    </tr>
+                    <tr>
+                        <td>Student C</td>
+                        <td>65%</td>
+                        <td>Not Eligible</td>
+                        <td><button class="issue-certificate-btn" disabled>Not Eligible</button></td>
+                    </tr>
+     
+                </tbody>
+            </table>
+        </div>
+        
+        
+        <a href="instructor_dashboard.html"><button class="back-btn">Back to Dashboard</button> </a>
+    </div>
+
+</body>
+</html>
+

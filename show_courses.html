@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Enrolled Courses</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        async function loadCourses() {
+            try {
+                const response = await fetch("show_courses.php");
+                const courses = await response.json();
+
+                const courseContainer = document.getElementById("course-list");
+
+                if (courses.length === 0) {
+                    courseContainer.innerHTML = "<p>You are not enrolled in any courses.</p>";
+                    return;
+                }
+
+                courses.forEach(course => {
+                    const courseCard = document.createElement("div");
+                    courseCard.className = "course-card";
+                    courseCard.innerHTML = `
+                        <h2>${course.CourseName}</h2>
+                        <a href="course_modules.php?course_id=${course.Course_ID}">
+                            <button>Show Modules</button>
+                        </a>
+                    `;
+                    courseContainer.appendChild(courseCard);
+                });
+            } catch (error) {
+                console.error("Error loading courses:", error);
+                document.getElementById("course-list").innerHTML = "<p>Failed to load courses. Please try again later.</p>";
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", loadCourses);
+    </script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <main class="content">
+            <section id="course-list">
+                <h1>Your Enrolled Courses</h1>
+                <!-- Courses will be dynamically listed here -->
+            </section>
+
+            <!-- Back to Dashboard Button -->
+            <div class="back-btn-container">
+                <a href="student_dashboard.html">
+                    <button class="back-btn"><i class="fas fa-arrow-left"></i> Back to Dashboard</button>
+                </a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

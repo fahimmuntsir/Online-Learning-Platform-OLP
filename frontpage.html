@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Learning Platform</title>
+    <!-- Link to Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h2, h3 {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+        h1 {
+            font-family: 'Arial', sans-serif;
+            color: #f41371;
+        }
+
+        /* Hero Section */
+        .hero {
+    background: url('./images/frontimg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+
+
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        .cta-btn {
+            padding: 15px 30px;
+            background-color: #f41371;
+            color: white;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #e64a19;
+        }
+
+        /* Features Section */
+        .features {
+            background-color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+
+        .feature-cards {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .feature-card i {
+            font-size: 3em;
+            color: #f41371;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            background-color: #f4f4f4;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .how-it-works h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+
+        .steps {
+            display: flex;
+            justify-content: space-around;
+            gap: 40px;
+        }
+
+        .step {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+        }
+
+        .step i {
+            font-size: 3em;
+            margin-bottom: 15px;
+            color: #ff5722;
+        }
+
+        .step h3 {
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+
+        .testimonial-cards {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-card p:last-child {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ff5722;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to the Online Learning Platform</h1>
+        <p>Your gateway to a world of knowledge, available anytime, anywhere.</p>
+        <a href="login.html" class="cta-btn">Start Learning Now</a>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Why Choose Us?</h2>
+        <div class="feature-cards">
+            <div class="feature-card">
+                <i class="fas fa-book"></i> <!-- Icon for courses -->
+                <h3>Wide Range of Courses</h3>
+                <p>Choose from a variety of courses in different subjects like Science, Math, Arts, and more!</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-clock"></i> <!-- Icon for flexibility -->
+                <h3>Flexible Learning</h3>
+                <p>Learn at your own pace. Our platform lets you study whenever and wherever you want.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-certificate"></i> <!-- Icon for certification -->
+                <h3>Certification</h3>
+                <p>Earn certificates upon completion of courses to showcase your skills to the world.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <i class="fas fa-book"></i>
+                <h3>Choose a Course</h3>
+                <p>Select from a wide range of courses tailored to your needs.</p>
+            </div>
+            <div class="step">
+                <i class="fas fa-laptop"></i>
+                <h3>Learn Online</h3>
+                <p>Access your lessons from anywhere on any device, at your own pace.</p>
+            </div>
+            <div class="step">
+                <i class="fas fa-certificate"></i>
+                <h3>Get Certified</h3>
+                <p>Complete the course and receive a certification to boost your career.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Students Say</h2>
+        <div class="testimonial-cards">
+            <div class="testimonial-card">
+                <p>"This platform has changed the way I learn. It's so easy to use and very flexible!"</p>
+                <p>- Affan Bhuiyan, Student</p>
+            </div>
+            <div class="testimonial-card">
+                <p>"I was able to complete a professional course in just a few weeks. Highly recommend!"</p>
+                <p>- Tanvirul Islam, Student</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Online Learning Platform | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+</body>
+</html>
